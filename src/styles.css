@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .brand-text {
+    @apply text-primary font-semibold text-stroke;
+    scale: 1.05;
+  }
+  .brand-text-sm {
+    @apply font-semibold;
+    scale: 1.05;
+  }
+  .widget {
+    @apply border rounded border-dark dark:text-light dark:bg-dark-200;
+    box-shadow: 0 0 theme(spacing.1) 0 theme(colors.dark.400);
+  }
+  .widget-inset {
+    /* margin: calc($spacer);
+	background: var(--body-bg);
+	color: var(--widget-text-color);
+	border: 1px solid var(--widget-border-color);
+	border-radius: var(--widget-border-radius); */
+  }
+  .lineup-article {
+    height: calc(100% / (var(--rows)));
+    /* flex-basis: min-content; */
+    /* aspect-ratio: 16 / 10; */
+    /* position: relative; */
+  }
+  .screenshot {
+    aspect-ratio: 16/9;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@layer utilities {
+  .app-region-drag {
+    user-select: none;
+    -webkit-app-region: drag;
+  }
+  .app-region-drag a {
+    -webkit-app-region: no-drag;
+  }
+  .text-stroke {
+    -webkit-text-stroke-width: 1px;
+  }
+}
+
+html,
+body,
+#root {
+  @apply h-screen;
+}
+
+html {
+  @apply text-xl;
+  color-scheme: light dark;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  @apply flex flex-col flex-grow overflow-hidden;
+  grid-template-columns: 1fr minmax(min-content, 1275px) 1fr;
+  grid-template-rows: minmax(0, 1fr);
+  /* width: min(65ch, 100% - 4rem);
+    margin-inline: auto; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+[data-te-select-dropdown-ref] {
+  @apply border rounded border-dark dark:bg-dark-300 mt-2 overflow-hidden;
+}
+
+[data-te-select-option-ref] {
+  @apply text-base !bg-transparent hover:!bg-primary;
+}
+[data-te-input-notch-leading-ref],
+[data-te-input-notch-middle-ref],
+[data-te-input-notch-trailing-ref] {
+  @apply !shadow-none;
+}

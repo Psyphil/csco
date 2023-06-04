@@ -1,0 +1,191 @@
+[
+	{
+		"title": "Mid from Fountain",
+		"grenade": "Molotov",
+		"movement": "Run",
+		"click": "Left",
+		"team": "T",
+		"map": "Overpass",
+		"imagePaths": [
+			"JDS8I8FF6S.png"
+		]
+	},
+	{
+		"title": "A Stairs from Long",
+		"grenade": "Smoke",
+		"movement": "Jump",
+		"click": "Left",
+		"team": "T",
+		"map": "Overpass",
+		"tick": "64",
+		"imagePaths": [
+			"JKFDFDS78WJD.png"
+		]
+	},
+	{
+		"title": "A Stairs from Mid",
+		"grenade": "Smoke",
+		"movement": "Stand",
+		"click": "Left",
+		"team": "T",
+		"map": "Overpass",
+		"imagePaths": [
+			"ASDHJ79F54A.png"
+		]
+	},
+	{
+		"title": "Heaven from Water",
+		"grenade": "Smoke",
+		"movement": "Stand",
+		"click": "Left",
+		"team": "",
+		"map": "Overpass",
+		"imagePaths": [
+			"HASDK7SD97S.png"
+		]
+	},
+	{
+		"title": "Pit from Water",
+		"grenade": "Molotov",
+		"movement": "Stand",
+		"click": "Left",
+		"team": "",
+		"map": "Overpass",
+		"imagePaths": [
+			"D75OPQC67.png"
+		]
+	},
+	{
+		"title": "B Site from Short",
+		"grenade": "Flash",
+		"movement": "Run",
+		"click": "Left",
+		"team": "",
+		"map": "Overpass",
+		"imagePaths": [
+			"ASDN98C4S7.png"
+		]
+	},
+	{
+		"title": "T Stairs from Mid",
+		"grenade": "Molotov",
+		"movement": "RunJump",
+		"click": "Left",
+		"team": "CT",
+		"map": "Overpass",
+		"imagePaths": [
+			"ASD643G2324.png"
+		]
+	},
+	{
+		"title": "Connector Oneway",
+		"grenade": "Smoke",
+		"movement": "Stand",
+		"click": "Left",
+		"team": "CT",
+		"tags": "oneway",
+		"map": "Overpass",
+		"imagePaths": [
+			"G5ASD56AS3S.png"
+		]
+	},
+	{
+		"title": "Monster from A site",
+		"grenade": "Flash",
+		"movement": "Run",
+		"click": "Left",
+		"team": "CT",
+		"map": "Overpass",
+		"imagePaths": [
+			"ASD6A29NH7.png"
+		]
+	},
+	{
+		"title": "Water Tunnel from Lower",
+		"grenade": "Molotov",
+		"movement": "Stand",
+		"click": "Left",
+		"team": "CT",
+		"map": "Overpass",
+		"imagePaths": [
+			"SAD6J34CV.png"
+		]
+	},
+	{
+		"title": "Left Pillar from Heaven",
+		"grenade": "Smoke",
+		"movement": "Run",
+		"click": "Left",
+		"team": "CT",
+		"map": "Overpass",
+		"imagePaths": [
+			"IKLPN674V.png"
+		]
+	},
+	{
+		"title": "CT Spawn from Banana",
+		"grenade": "Smoke",
+		"movement": "Stand",
+		"click": "Left",
+		"team": "T",
+		"map": "Inferno",
+		"imagePaths": [
+			"inferno-1.png"
+		]
+	},
+	{
+		"title": "B Site from Car",
+		"grenade": "Flash",
+		"movement": "Jump",
+		"click": "Left",
+		"team": "T",
+		"map": "Inferno",
+		"imagePaths": [
+			"inferno-2.png"
+		]
+	},
+	{
+		"title": "Coffins from Banana",
+		"grenade": "Smoke",
+		"movement": "Stand",
+		"click": "Left",
+		"team": "T",
+		"map": "Inferno",
+		"imagePaths": [
+			"inferno-3.png"
+		]
+	},
+	{
+		"title": "Long from Second Mid",
+		"grenade": "Smoke",
+		"movement": "Stand",
+		"click": "Left",
+		"team": "T",
+		"map": "Inferno",
+		"imagePaths": [
+			"inferno-4.png"
+		]
+	},
+	{
+		"title": "Short from Second Mid",
+		"grenade": "Smoke",
+		"movement": "Jump",
+		"click": "Left",
+		"team": "T",
+		"map": "Inferno",
+		"imagePaths": [
+			"inferno-5.png"
+		]
+	},
+	{
+		"title": "Long from Mid",
+		"grenade": "Flash",
+		"movement": "Stand",
+		"click": "Middle",
+		"team": "T",
+		"map": "Inferno",
+		"imagePaths": [
+			"inferno-6.png"
+		]
+	}
+]
