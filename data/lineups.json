@@ -6,7 +6,7 @@
 		"click": "Left",
 		"team": "T",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"JDS8I8FF6S.png"
 		]
 	},
@@ -18,7 +18,7 @@
 		"team": "T",
 		"map": "Overpass",
 		"tick": "64",
-		"imagePaths": [
+		"images": [
 			"JKFDFDS78WJD.png"
 		]
 	},
@@ -29,7 +29,7 @@
 		"click": "Left",
 		"team": "T",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"ASDHJ79F54A.png"
 		]
 	},
@@ -40,7 +40,7 @@
 		"click": "Left",
 		"team": "",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"HASDK7SD97S.png"
 		]
 	},
@@ -51,7 +51,7 @@
 		"click": "Left",
 		"team": "",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"D75OPQC67.png"
 		]
 	},
@@ -62,7 +62,7 @@
 		"click": "Left",
 		"team": "",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"ASDN98C4S7.png"
 		]
 	},
@@ -73,7 +73,7 @@
 		"click": "Left",
 		"team": "CT",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"ASD643G2324.png"
 		]
 	},
@@ -85,7 +85,7 @@
 		"team": "CT",
 		"tags": "oneway",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"G5ASD56AS3S.png"
 		]
 	},
@@ -96,7 +96,7 @@
 		"click": "Left",
 		"team": "CT",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"ASD6A29NH7.png"
 		]
 	},
@@ -107,7 +107,7 @@
 		"click": "Left",
 		"team": "CT",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"SAD6J34CV.png"
 		]
 	},
@@ -118,7 +118,7 @@
 		"click": "Left",
 		"team": "CT",
 		"map": "Overpass",
-		"imagePaths": [
+		"images": [
 			"IKLPN674V.png"
 		]
 	},
@@ -129,7 +129,7 @@
 		"click": "Left",
 		"team": "T",
 		"map": "Inferno",
-		"imagePaths": [
+		"images": [
 			"inferno-1.png"
 		]
 	},
@@ -140,7 +140,7 @@
 		"click": "Left",
 		"team": "T",
 		"map": "Inferno",
-		"imagePaths": [
+		"images": [
 			"inferno-2.png"
 		]
 	},
@@ -151,7 +151,7 @@
 		"click": "Left",
 		"team": "T",
 		"map": "Inferno",
-		"imagePaths": [
+		"images": [
 			"inferno-3.png"
 		]
 	},
@@ -162,7 +162,7 @@
 		"click": "Left",
 		"team": "T",
 		"map": "Inferno",
-		"imagePaths": [
+		"images": [
 			"inferno-4.png"
 		]
 	},
@@ -173,7 +173,7 @@
 		"click": "Left",
 		"team": "T",
 		"map": "Inferno",
-		"imagePaths": [
+		"images": [
 			"inferno-5.png"
 		]
 	},
@@ -184,7 +184,7 @@
 		"click": "Middle",
 		"team": "T",
 		"map": "Inferno",
-		"imagePaths": [
+		"images": [
 			"inferno-6.png"
 		]
 	}

@@ -4,7 +4,7 @@
 
 @layer components {
   .brand-text {
-    @apply text-primary font-semibold text-stroke;
+    @apply text-stroke font-semibold text-primary;
     scale: 1.05;
   }
   .brand-text-sm {
@@ -12,22 +12,15 @@
     scale: 1.05;
   }
   .widget {
-    @apply border rounded border-dark dark:text-light dark:bg-dark-200;
+    @apply rounded border border-dark dark:bg-dark-200 dark:text-light;
     box-shadow: 0 0 theme(spacing.1) 0 theme(colors.dark.400);
   }
-  .widget-inset {
-    /* margin: calc($spacer);
+  /* .widget-inset {
+    margin: calc($spacer);
 	background: var(--body-bg);
 	color: var(--widget-text-color);
 	border: 1px solid var(--widget-border-color);
-	border-radius: var(--widget-border-radius); */
-  }
-  .lineup-article {
-    height: calc(100% / (var(--rows)));
-    /* flex-basis: min-content; */
-    /* aspect-ratio: 16 / 10; */
-    /* position: relative; */
-  }
+	border-radius: var(--widget-border-radius);} */
   .screenshot {
     aspect-ratio: 16/9;
     background-position: center;
@@ -46,6 +39,12 @@
   }
   .text-stroke {
     -webkit-text-stroke-width: 1px;
+  }
+  .row-height {
+    height: calc(100% / (var(--rows)));
+    /* flex-basis: min-content; */
+    /* aspect-ratio: 16 / 10; */
+    /* position: relative; */
   }
 }
 
@@ -69,7 +68,7 @@ body {
 }
 
 main {
-  @apply flex flex-col flex-grow overflow-hidden;
+  @apply flex flex-grow flex-col overflow-hidden;
   grid-template-columns: 1fr minmax(min-content, 1275px) 1fr;
   grid-template-rows: minmax(0, 1fr);
   /* width: min(65ch, 100% - 4rem);
@@ -82,14 +81,21 @@ code {
 }
 
 [data-te-select-dropdown-ref] {
-  @apply border rounded border-dark dark:bg-dark-300 mt-2 overflow-hidden;
+  @apply mt-2 overflow-hidden rounded border border-dark dark:bg-dark-300;
 }
 
 [data-te-select-option-ref] {
-  @apply text-base !bg-transparent hover:!bg-primary;
+  @apply !bg-transparent text-base hover:!bg-primary;
 }
+
 [data-te-input-notch-leading-ref],
 [data-te-input-notch-middle-ref],
 [data-te-input-notch-trailing-ref] {
   @apply !shadow-none;
+}
+
+[data-layout="default"] div:has(.screenshot:nth-of-type(2):last-child) {
+  > .screenshot {
+    background: red;
+  }
 }

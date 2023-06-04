@@ -50,9 +50,13 @@ export enum Team {
   T = "t",
 }
 
+export enum Layout {
+  Default = "default",
+}
+
 export interface ILineup {
   title: string;
-  imagePaths: string[];
+  images: (string | { path: string; options?: string })[];
   map: Map | string;
   grenade: Grenade | string;
   movement: Movement | string;
@@ -61,39 +65,55 @@ export interface ILineup {
   team?: Team | string;
   tags?: string[];
   source?: string;
+  layout?: string;
 }
 
 export class Lineup extends React.Component implements ILineup {
   title: string;
-  imagePaths: string[];
+  images: { path: string; options?: string }[];
   map: Map;
   grenade: Grenade;
   movement: Movement;
   click: Click;
   tick: Tick;
   team: Team;
-  source: string;
   tags: string[];
+  source: string;
+  layout: string;
   id: string = crypto.randomUUID();
 
   constructor(props: ILineup) {
     super(props);
     this.title = props.title ?? "";
-    this.imagePaths = props.imagePaths ?? [""];
+    this.images = props.images.map((image) => {
+      return (
+        typeof image === "string"
+          ? {
+              path: image,
+            }
+          : image
+      ) as { path: string; options?: string };
+    });
+    //   typeof props.images[0] === "string"
+    //     ? props.images.map((image) => ({
+    //         path: image,
+    //       }))
+    //     : (props.images as any[]);
     this.map = props.map.toLowerCase() as Map;
     this.grenade = props.grenade.toLowerCase() as Grenade;
     this.movement = props.movement.toLowerCase() as Movement;
     this.click = props.click.toLowerCase() as Click;
     this.tick = (props.tick ? props.tick.toLowerCase() : Tick.Any) as Tick;
     this.team = (props.team ? props.team.toLowerCase() : Tick.Any) as Team;
-    this.source = props.source ?? "";
     this.tags = props.tags ?? [];
+    this.source = props.source ?? "";
+    this.layout = props.layout ?? Layout.Default;
   }
 
   pill = (text?: string) => {
     if (text === undefined) return "";
     return (
-      <div className="rounded border border-dark-500 dark:bg-dark-400 dark:text-light px-1 py-0.5">
+      <div className="rounded border border-dark-500 px-1 py-0.5 dark:bg-dark-400 dark:text-light">
         {text}
       </div>
     );
@@ -103,24 +123,27 @@ export class Lineup extends React.Component implements ILineup {
     return (
       <article
         key={this.id}
-        className="lineup-article widget text-xs inline-flex flex-col max-w-[100vw]"
+        className="row-height widget inline-flex max-w-[100vw] flex-col text-xs"
       >
-        <h2 className="items-center border rounded border-dark dark:bg-dark-400 m-1 mb-0 p-1">
+        <h2 className="m-1 mb-0 items-center rounded border border-dark p-1 dark:bg-dark-400">
           {this.title}
         </h2>
-        <div className="relative flex-grow m-1 rounded overflow-hidden border border-dark">
-          {this.imagePaths.map((path, index) => {
+        <div
+          className="relative m-1 flex-grow overflow-hidden rounded border border-dark"
+          data-lineup-layout={this.layout}
+        >
+          {this.images.map((image, index) => {
             return (
               <div
                 key={this.id + "-" + index}
-                className="screenshot max-w-full hover:scale-300 [height:var(--image-height)]"
-                style={{ backgroundImage: `url(${path})` }}
+                className={`screenshot hover:!clip-none relative max-w-full [height:var(--image-height)] hover:z-10 hover:!scale-300 hover:before:!hidden ${image.options}`}
+                style={{ backgroundImage: `url(${image.path})` }}
               >
-                {/* <img className='text-image' src='{path}' /> */}
+                {/* <img className='text-image' src='{image.path}' /> */}
               </div>
             );
           })}
-          <div className="absolute right-0 bottom-0 m-1 flex gap-1">
+          <div className="absolute bottom-0 right-0 m-1 flex gap-1">
             {this.pill(Enum.key(Grenade, this.grenade))}
             {this.pill(Enum.key(Movement, this.movement))}
             {this.pill(Enum.key(Click, this.click))}

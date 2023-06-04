@@ -1,0 +1,41 @@
+[
+	{
+		"title": "2 images",
+		"grenade": "Molotov",
+		"movement": "Run",
+		"click": "Left",
+		"team": "T",
+		"map": "Overpass",
+		"images": [
+			"JDS8I8FF6S.png",
+			"JKFDFDS78WJD.png"
+		]
+	},
+	{
+		"title": "3 images",
+		"grenade": "Molotov",
+		"movement": "Run",
+		"click": "Left",
+		"team": "T",
+		"map": "Overpass",
+		"images": [
+			"JDS8I8FF6S.png",
+			"JKFDFDS78WJD.png",
+			"ASDHJ79F54A.png"
+		]
+	},
+	{
+		"title": "Crosshair",
+		"grenade": "Molotov",
+		"movement": "Run",
+		"click": "Left",
+		"team": "T",
+		"map": "Overpass",
+		"images": [
+			{
+				"path": "JDS8I8FF6S.png",
+				"options": "crosshair"
+			}
+		]
+	}
+]

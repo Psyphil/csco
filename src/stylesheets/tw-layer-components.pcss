@@ -1,0 +1,26 @@
+@layer components {
+  .brand-text {
+    @apply text-primary font-semibold text-stroke;
+    scale: 1.05;
+  }
+  .brand-text-sm {
+    @apply font-semibold;
+    scale: 1.05;
+  }
+  .widget {
+    @apply border rounded border-dark dark:text-light dark:bg-dark-200;
+    box-shadow: 0 0 theme(spacing.1) 0 theme(colors.dark.400);
+  }
+  /* .widget-inset {
+    margin: calc($spacer);
+	background: var(--body-bg);
+	color: var(--widget-text-color);
+	border: 1px solid var(--widget-border-color);
+	border-radius: var(--widget-border-radius);} */
+  .screenshot {
+    aspect-ratio: 16/9;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

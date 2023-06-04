@@ -1,0 +1,31 @@
+@layer utilities {
+  .app-region-drag {
+    user-select: none;
+    -webkit-app-region: drag;
+  }
+  .app-region-drag a {
+    -webkit-app-region: no-drag;
+  }
+  .text-stroke {
+    -webkit-text-stroke-width: 1px;
+  }
+  .row-height {
+    height: calc(100% / (var(--rows)));
+    /* flex-basis: min-content; */
+    /* aspect-ratio: 16 / 10; */
+    /* position: relative; */
+  }
+  .clip-none {
+    clip-path: none;
+  }
+  .crosshair:before {
+    @apply absolute bottom-0 left-0 right-0 top-0 z-20;
+    content: "";
+    background-color: #00ff00;
+    mask-image: url("content/crosshair.svg");
+    /* background-image: url('data:image/svg+xml,<svg fill="%2300ff00" width="32px" height="32px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" stroke="%2300ff00"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 7h2v2H7V7zm0-7h2v5H7V0zm0 11h2v5H7v-5zm4-4h5v2h-5V7zM0 7h5v2H0V7z" fill-rule="evenodd"></path> </g></svg>');
+    background-image: url("content/crosshair.svg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -30,12 +30,16 @@ function get(filter?: ILineupFilter): Lineup[] {
   if (!(data instanceof Array)) return [];
   let results = new Array<Lineup>();
   applyFilter(data, filter).forEach((item: ILineup) => {
-    if (item.imagePaths) {
-      for (let i = 0; i < item.imagePaths.length ?? 0; i++) {
-        let path = item.imagePaths[i];
-        if (path && path.length > 0 && !path.startsWith("http")) {
-          item.imagePaths[i] = "image://" + path;
+    if (item.images) {
+      for (let i = 0; i < item.images.length ?? 0; i++) {
+        let image: any = item.images[i];
+        let isString = typeof image === "string";
+        let path: string = isString ? image : image["path"];
+        if (path?.length > 0 && !path.startsWith("http")) {
+          path = "image://" + path;
         }
+        if (isString) item.images[i] = path;
+        else (item.images[i] as any).path = path;
       }
     }
     results.push(new Lineup(item));

@@ -1,0 +1,72 @@
+[data-te-select-dropdown-ref] {
+  @apply mt-2 overflow-hidden rounded border border-dark dark:bg-dark-300;
+}
+
+[data-te-select-option-ref] {
+  @apply !bg-transparent text-base hover:!bg-primary;
+}
+
+[data-te-input-notch-leading-ref],
+[data-te-input-notch-middle-ref],
+[data-te-input-notch-trailing-ref] {
+  @apply !shadow-none;
+}
+
+[data-lineup-layout] {
+  > .screenshot:not(:first-child) {
+    @apply absolute top-0;
+  }
+  &:has(> .screenshot:nth-child(2)):before {
+    @apply absolute bottom-0 left-0 right-0 top-0 z-10 block bg-dark;
+    --border-width: calc(0.25rem);
+    content: "";
+  }
+}
+[data-lineup-layout="default"] {
+  &:has(> .screenshot:nth-child(2)):not(:has(> .screenshot:nth-child(3))) {
+    &:before {
+      clip-path: polygon(
+        calc(25% + 25% / 4 * 5 - var(--border-width) / 2) 0,
+        calc(25% + 25% / 4 * 5 + var(--border-width) / 2) 0,
+        calc(25% + 25% / 4 * 3 + var(--border-width) / 2) 100%,
+        calc(25% + 25% / 4 * 3 - var(--border-width) / 2) 100%
+      );
+    }
+    > .screenshot:first-child {
+      transform: translateX(-25%);
+    }
+    > .screenshot:nth-child(2) {
+      @apply left-1/4;
+      /* transform: translateX(25%); */
+      clip-path: polygon(
+        calc(25% / 4 * 5) 0,
+        100% 0,
+        100% 100%,
+        calc(25% / 4 * 3) 100%
+      );
+    }
+  }
+  &:has(> .screenshot:nth-child(3)):not(:has(> .screenshot:nth-child(4))) {
+    &:before {
+      clip-path: polygon(
+        calc(50% - var(--border-width) / 2) 0,
+        calc(50% + var(--border-width) / 2) 0,
+        calc(50% + var(--border-width) / 2) calc(50% - var(--border-width) / 2),
+        100% calc(50% - var(--border-width) / 2),
+        100% calc(50% + var(--border-width) / 2),
+        calc(50% + var(--border-width) / 2) calc(50% + var(--border-width) / 2),
+        calc(50% + var(--border-width) / 2) 100%,
+        calc(50% - var(--border-width) / 2) 100%
+      );
+    }
+    > .screenshot:first-child {
+      transform: translateX(-25%);
+    }
+    > .screenshot:nth-child(2) {
+      @apply right-0 top-0 h-1/2;
+    }
+    > .screenshot:nth-child(3) {
+      @apply right-0 top-1/2 h-1/2;
+    }
+  }
+}
